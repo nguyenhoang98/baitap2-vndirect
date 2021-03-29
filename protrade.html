@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/protrade.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header flex">
+      <div class="header__left col-1-3">
+        <ul class="flex">
+          <li>
+            <a href="#">
+              <img src="./img/logo.svg" class="logo" />
+            </a>
+          </li>
+          <li>
+            <a href="#" class="time text-orange" id="time"></a>
+            <a href="#" class="date text-orange" id="date"></a>
+          </li>
+          <li>
+            <a href="#" class="text-orange"> Trang chủ </a>
+          </li>
+          <li>
+            <a href="#"> Tài sản </a>
+          </li>
+          <li>
+            <a href="#"> Hướng dẫn </a>
+          </li>
+          <li>
+            <a href="#" class="text-orange"> Lãi lỗ </a>
+          </li>
+          <li>
+            <a class="top" id="top">
+              <i class="fa fa-trophy" aria-hidden="true"></i>
+              Top cao thủ phái sinh</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="header__right col-1-3">
+        <ul>
+          <li>
+            <a href="#" class="trial">Bản Trial</a>
+          </li>
+          <li>
+            <a href="#" class="bg-orange b-r-8">Nâng cấp tài khoản</a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              &nbsp; Nguyễn văn hoàng
+              <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </a>
+
+            <div class="model-logout">
+              <a href="./index.html">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container grid flex" id="grid">
+      <div class="container__left" id="container__left">
+        <div class="char char-top">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container">
+            <div id="tradingview_fadbb"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.widget({
+                width: "100%",
+                height: "100%",
+                symbol: "NASDAQ:AAPL",
+                interval: "D",
+                timezone: "Etc/UTC",
+                theme: "dark",
+                style: "1",
+                locale: "vi_VN",
+                toolbar_bg: "#f1f3f6",
+                enable_publishing: false,
+                allow_symbol_change: true,
+                container_id: "tradingview_fadbb",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div class="char char-bottom">
+          <!-- TradingView Widget BEGIN -->
+          <div
+            class="tradingview-widget-container tab-trading-view"
+            id="tab-trading-view-1"
+          >
+            <div id="tradingview_ebd7a"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.widget({
+                width: "100%",
+                height: "100%",
+                symbol: "NASDAQ:AAPL",
+                interval: "D",
+                timezone: "Etc/UTC",
+                theme: "dark",
+                style: "1",
+                locale: "vi_VN",
+                toolbar_bg: "#f1f3f6",
+                enable_publishing: false,
+                allow_symbol_change: true,
+                container_id: "tradingview_ebd7a",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget BEGIN -->
+          <div
+            class="tradingview-widget-container tab-trading-view"
+            id="tab-trading-view-2"
+          >
+            <div id="tradingview_bfa46"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+            <script type="text/javascript">
+              new TradingView.MediumWidget({
+                symbols: [
+                  ["Apple", "AAPL"],
+                  ["Google", "GOOGL"],
+                  ["Microsoft", "MSFT"],
+                ],
+                chartOnly: false,
+                width: "100%",
+                height: "100%",
+                locale: "vi_VN",
+                colorTheme: "dark",
+                gridLineColor: "#2a2e39",
+                trendLineColor: "#1976d2",
+                fontColor: "#787b86",
+                underLineColor: "rgba(55, 166, 239, 0.15)",
+                isTransparent: false,
+                autosize: false,
+                container_id: "tradingview_bfa46",
+              });
+            </script>
+          </div>
+          <!-- TradingView Widget BEGIN -->
+          <div
+            class="tradingview-widget-container tab-trading-view"
+            id="tab-trading-view-3"
+          >
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://vn.tradingview.com/markets/cryptocurrencies/prices-all/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text">Thị trường Tiền điện tử</span></a
+              >
+              bởi TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js"
+              async
+            >
+                {
+                "width": "100%",
+                "height": "100%",
+                "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                "displayCurrency": "USD",
+                "colorTheme": "dark",
+                "locale": "vi_VN"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          <div
+            class="tradingview-widget-container tab-trading-view"
+            id="tab-trading-view-4"
+          >
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright">
+              <a
+                href="https://vn.tradingview.com/markets/currencies/forex-heat-map/"
+                rel="noopener"
+                target="_blank"
+                ><span class="blue-text">Bản đồ Nhiệt Forex</span></a
+              >
+              từ TradingView
+            </div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-forex-heat-map.js"
+              async
+            >
+                {
+                "width": "100%",
+                "height": "100%",
+                "currencies": [
+                  "EUR",
+                  "USD",
+                  "JPY",
+                  "GBP",
+                  "CHF",
+                  "AUD",
+                  "CAD",
+                  "NZD",
+                  "CNY"
+                ],
+                "isTransparent": false,
+                "colorTheme": "dark",
+                "locale": "vi_VN"
+              }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+      <div class="container__center" id="container__center">
+        <div class="table table-top">
+          <table>
+            <tr>
+              <th>VN30F2104</th>
+              <th>
+                Sàn: <br />
+                <span class="text-turquoise">1080.7</span>
+              </th>
+              <th>
+                TC:
+                <br />
+                <span class="text-orange">1162.0</span>
+              </th>
+              <th>
+                Trần:
+                <br />
+                <span class="text-purple">1243.3</span>
+              </th>
+            </tr>
+            <tr>
+              <th colspan="2" class="text-orange">Bước giá</th>
+              <th colspan="2">Lịch sử khớp lệnh</th>
+            </tr>
+            <tr>
+              <th>KL Mua</th>
+              <th>Giá Mua</th>
+              <th>Giá Bán</th>
+              <th>KL Bán</th>
+            </tr>
+            <tr>
+              <td>175</td>
+              <td class="text-green">1173.0</td>
+              <td class="text-green">1173.1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="text-green">1172.8</td>
+              <td class="text-green">1173.2</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>44</td>
+              <td class="text-green">1172.6</td>
+              <td class="text-green">1173.3</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>61</td>
+              <td class="text-green">1172.5</td>
+              <td class="text-green">1173.5</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="text-green">1172.3</td>
+              <td class="text-green">1173.8</td>
+              <td>66</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="text-green">1172.2</td>
+              <td class="text-green">1173.9</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="text-green">1172.1</td>
+              <td class="text-green">1174.0</td>
+              <td>331</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td class="text-green">1172.0</td>
+              <td class="text-green">1174.1</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="text-green">1171.8</td>
+              <td class="text-green">1174.3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td class="text-green">1171.7</td>
+              <td class="text-green">1174.5</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="text-green">1172.3</td>
+              <td class="text-green">1173.8</td>
+              <td>66</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td class="text-green">1172.2</td>
+              <td class="text-green">1173.9</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td class="text-green">1172.1</td>
+              <td class="text-green">1174.0</td>
+              <td>331</td>
+            </tr>
+            <tr>
+              <td>78</td>
+              <td class="text-green">1172.0</td>
+              <td class="text-green">1174.1</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="text-green">1171.8</td>
+              <td class="text-green">1174.3</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td class="text-green">1171.7</td>
+              <td class="text-green">1174.5</td>
+              <td>74</td>
+            </tr>
+          </table>
+        </div>
+        <div class="table table-bottom">
+          <table>
+            <tr>
+              <th>Mã</th>
+              <th>Giá</th>
+              <th>+/-</th>
+              <th>Lệch</th>
+              <th>Tổng KL</th>
+            </tr>
+            <tr>
+              <td class="text-green">VN30F2105</td>
+              <td class="text-green">1,172.6</td>
+              <td class="text-green">12.4</td>
+              <td class="text-green">5.41</td>
+              <td>439</td>
+            </tr>
+            <tr>
+              <td class="text-green">VN30F2106</td>
+              <td class="text-green">1,174.9</td>
+              <td class="text-green">13.9</td>
+              <td class="text-green">7.71</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td class="text-green">VN30F2109</td>
+              <td class="text-green">1,174</td>
+              <td class="text-green">5.9</td>
+              <td class="text-green">6.81</td>
+              <td>158</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="container__right">
+        <div class="action action-top">
+          <div class="tabcontent" id="tab-1">
+            <div class="flex tab-header">
+              <div
+                class="text-center col-5 tab-link-in-tab"
+                id="tab-link-in-tab-1"
+                onclick="openTabInTab('ltn' , this)"
+              >
+                Lệnh trong ngày
+              </div>
+              <div
+                class="text-center col-5 tab-link-in-tab"
+                id="tab-link-in-tab-2"
+                onclick="openTabInTab('ldk' , this)"
+              >
+                Lệnh điều kiện
+              </div>
+              <div class="text-center col-2 flex text-orange">
+                <i class="fa fa-refresh" aria-hidden="true"></i>
+                <span class="close-action"
+                  ><i class="fa fa-minus" aria-hidden="true"></i
+                ></span>
+              </div>
+            </div>
+
+            <div id="ltn" class="tab-in-tab">
+              <table class="table-tab">
+                <tr>
+                  <th>Lệnh</th>
+                  <th>Mã</th>
+                  <th>KL khớp</th>
+                  <th>Giá</th>
+                  <th>TT</th>
+                </tr>
+                <tr class="text-center">
+                  <td colspan="5" style="color: #777">
+                    Chưa có lệnh nào trong sổ lệnh
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="ldk" class="tab-in-tab">
+              <table class="table-tab">
+                <tr>
+                  <th>Lệnh</th>
+                  <th>Mã</th>
+                  <th>
+                    Giá kích <br />
+                    hoạt
+                  </th>
+                  <th>KL</th>
+                  <th>Giá</th>
+                  <th>
+                    Ngày hết <br />
+                    hạn
+                  </th>
+                  <th>TT</th>
+                </tr>
+                <tr class="text-center">
+                  <td colspan="7" style="color: #777">
+                    Chưa có lệnh nào trong sổ lệnh
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="tabcontent" id="tab-2">
+            <div class="flex tab-header">
+              <div
+                class="text-center col-8 tab-link-in-tab vtm"
+                onclick="openTabInTab('vtm' , this)"
+              >
+                Vị thế mở
+              </div>
+              <div class="text-center col-4 flex">
+                <span
+                  onclick="openTabInTab('vtd' , this)"
+                  class="tab-link-in-tab"
+                  >Vị thế đóng</span
+                >
+                <span class="text-orange">
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                  <span class="close-action">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                  </span>
+                </span>
+              </div>
+            </div>
+            <div id="vtm" class="tab-in-tab">
+              <table class="table-tab">
+                <tr>
+                  <th>Mã</th>
+                  <th>KL</th>
+                  <th>Giá vốn</th>
+                  <th colspan="3">Giá hiện tại</th>
+                  <th>+/-</th>
+                </tr>
+                <tr class="text-center">
+                  <td colspan="7" style="color: #777">
+                    Chưa có lệnh nào trong sổ lệnh
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div id="vtd" class="tab-in-tab">
+              <table class="table-tab">
+                <tr>
+                  <th>Mã</th>
+                  <th>KL</th>
+                  <th>Giá mua</th>
+                  <th>Giá bán</th>
+                  <th>
+                    Lãi/lỗ đã thực <br />
+                    hiện
+                  </th>
+                </tr>
+                <tr class="text-center">
+                  <td colspan="7" style="color: #777">
+                    Chưa có lệnh nào trong sổ lệnh
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="tabcontent" id="tab-3">
+            <table class="table-tab">
+              <tr>
+                <th class="text-left text-orange">Vị thế mở</th>
+                <th class="text-right text-orange">
+                  <span><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                  &nbsp;
+                  <span
+                    ><i class="fa fa-external-link" aria-hidden="true"></i
+                  ></span>
+                  &nbsp;
+                  <span class="close-action"
+                    ><i class="fa fa-minus" aria-hidden="true"></i
+                  ></span>
+                </th>
+              </tr>
+              <tr>
+                <th class="text-left">Tài sản ròng</th>
+                <th class="text-right">40,000,000</th>
+              </tr>
+              <tr>
+                <th class="text-left">Số dư ký quỹ</th>
+                <th class="text-right">24,000,000</th>
+              </tr>
+              <tr>
+                <th class="text-left">Thuế và phí</th>
+                <th class="text-right">0</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="action action-bottom">
+          <div class="tab-form">
+            <div class="menu-tab-form flex">
+              <label
+                class="tab-radio"
+                id="tab-raio-1"
+                onclick="openFormInTab('lenhthuong' , this)"
+              >
+                <input type="radio" name="name" />
+                Lệnh thường
+              </label>
+              <label
+                class="tab-radio"
+                onclick="openFormInTab('lenhstop' , this)"
+              >
+                <input type="radio" name="name" />
+                Lệnh stop
+              </label>
+              <label class="tab-radio">
+                <input type="radio" name="name" disabled />
+                Lệnh trailing
+              </label>
+              <label class="tab-radio">
+                <input type="radio" name="name" disabled />
+                Lệnh SOS
+              </label>
+            </div>
+
+            <div class="form tab-form-content" id="lenhthuong">
+              <form>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Mã HĐTL:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      value="VN30F2104"
+                      placeholder="Mã"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Giá đặt:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      placeholder="Giá"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Khối lượng:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      placeholder="Khối lượng"
+                    />
+                  </div>
+                </div>
+                <div class="group-form text-right">
+                  <button class="btn btn-buy">Mua</button>
+                  <button class="btn btn-sell">Bán</button>
+                  <label class="check-save">
+                    <input type="checkbox" /><span>Lưu lệnh </span></label
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="form tab-form-content" id="lenhstop">
+              <form>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Mã HĐTL:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      value="VN30F2104"
+                      placeholder="Mã"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Giá đặt:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      placeholder="Giá"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Khối lượng:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      placeholder="Khối lượng"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Giá trị khớp</label>
+                  </div>
+                  <div class="col-8 flex">
+                    <div class="col-2">
+                      <button type="button" class="btn btn-w-8">&#8804;</button>
+                    </div>
+                    <div class="col-2">
+                      <button type="button" class="btn btn-w-8">&#8805;</button>
+                    </div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        class="form-tab-input"
+                        placeholder="Ngày hết hạn"
+                        id="expiration-date"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="group-form flex">
+                  <div class="col-4">
+                    <label class="form-tab-label">Ngày hết hạn:</label>
+                  </div>
+                  <div class="col-8">
+                    <input
+                      type="text"
+                      class="form-tab-input"
+                      placeholder="Ngày hết hạn"
+                      id="expiration-date"
+                    />
+                  </div>
+                </div>
+                <div class="group-form flex-center">
+                  <button class="btn btn-buy">Mua</button>
+                  <button class="btn btn-sell">Bán</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="model" id="model">
+      <div class="model-content">
+        <span class="close-model" id="close-model">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </span>
+        <div class="flex">
+          <div class="col-6 model-content-inner">
+            <img src="./img/caothu.png" class="img-logo-model" />
+            <div class="model-title">BẢNG XẾP HẠNG THÁNG</div>
+            <div class="flex">
+              <span class="text-orange">CAO THỦ PHÁI SINH</span>
+              <span>Đơn vị: VND </span>
+            </div>
+            <div class="top-cao-thu top-1">
+              <span class="img-model-span"
+                ><img src="./img/cup.png" class="img-model"
+              /></span>
+              <span class="text-left f-left"> phanntl2012 </span>
+              <span class="text-right f-right"> 48,517,597 </span>
+            </div>
+            <div class="top-cao-thu top-2">
+              <span class="img-model-span">
+                <img src="./img/silver.png" class="img-model" />
+              </span>
+              <span class="f-left"> toanthien </span>
+              <span class="f-right">44,274,126</span>
+            </div>
+            <div class="top-cao-thu top-3">
+              <span class="img-model-span"
+                ><img src="./img/copper.png" class="img-model"
+              /></span>
+              <span class="f-left"> hthinh267 </span>
+              <span class="f-right">43,426,414</span>
+            </div>
+
+            <div class="list-caothu">
+              <div class="item-caothu flex">
+                <span>long6789</span>
+                <span>43,202,153</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>anhcnsb02174gmail.com</span>
+                <span>43,152,157</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>tamha0610</span>
+                <span>43,067,258</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>100794161190</span>
+                <span>42,910,733</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>0989144966</span>
+                <span>42,885,699</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>huuthi1991</span>
+                <span>42,880,338</span>
+              </div>
+              <div class="item-caothu flex">
+                <span>thoanguyen82</span>
+                <span>42,847,032</span>
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-join">Tham gia ngay tại đây</button>
+            </div>
+          </div>
+          <div class="col-6 model-content-inner">
+            <div class="top-all-title">
+              <h2>BẢNG XẾP HẠNG TUẦN</h2>
+              <p>(Từ 8h00 thứ 2 đến 15H00 thứ 6 hàng tuần)</p>
+            </div>
+
+            <div class="top-all-list">
+              <div class="top-all-list-header">
+                <div class="p-d-1 flex">
+                  <span class="text-orange">CAO THỦ PHÁI SINH</span>
+                  <span>Đơn vị: VND</span>
+                </div>
+                <div class="top-all-item-header flex">
+                  <span>phanntl2012</span>
+                  <span>48,517,597</span>
+                </div>
+                <div class="top-all-item-header flex">
+                  <span>toanthien</span>
+                  <span>44,274,126</span>
+                </div>
+                <div class="top-all-item-header flex">
+                  <span>hthinh267</span>
+                  <span>43,426,414</span>
+                </div>
+              </div>
+              <!--  -->
+              <div class="top-all-list-body">
+                <div class="flex top-all-item-body">
+                  <span class="name">long6789</span>
+                  <span class="money">43,202,153</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">anhcnsb02174gmail.com</span>
+                  <span class="money">43,152,157</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">tamha0610</span>
+                  <span class="money">43,067,258</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">100794161190</span>
+                  <span class="money">42,910,733</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">0989144966</span>
+                  <span class="money">42,885,699</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">huuthi1991</span>
+                  <span class="money">42,880,338</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">thoanguyen82</span>
+                  <span class="money">42,847,032</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">kennythuhuhuong</span>
+                  <span class="money">42,719,052</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">0001803113</span>
+                  <span class="money">42,710,061</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">tainguyen0112</span>
+                  <span class="money">42,646,696</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">rausach</span>
+                  <span class="money">42,480,203</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">0001170480</span>
+                  <span>42,479,596</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">xuanmai2010</span>
+                  <span class="money">42,435,471</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">minhnv641</span>
+                  <span class="money">42,400,063</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">kimvi123</span>
+                  <span class="money">42,243,275</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">tonylong</span>
+                  <span class="money">42,197,000</span>
+                </div>
+                <div class="flex top-all-item-body">
+                  <span class="name">hoavuano</span>
+                  <span class="money">42,054,425</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu_fix_bottom" id="menu_fix_bottom">
+      <div class="menu-trading-view flex">
+        <div class="menu-trading-view-left">
+          ản quyền thuộc về VNDIRECT © 2021. v2.2.2
+        </div>
+        <div class="menu-trading-view-right">
+          <a
+            href="javascript:void(0)"
+            class="link-trading-view"
+            onclick="openTradingView('tab-trading-view-1', this)"
+            >VN30 INTRADAY</a
+          >
+          <a
+            href="javascript:void(0)"
+            class="link-trading-view"
+            onclick="openTradingView('tab-trading-view-2', this)"
+            >VN30
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="link-trading-view"
+            id="vn30"
+            onclick="openTradingView('tab-trading-view-3', this)"
+            ><i class="fa fa-bar-chart" aria-hidden="true"></i
+          ></a>
+          <a
+            href="javascript:void(0)"
+            class="link-trading-view"
+            onclick="openTradingView('tab-trading-view-4', this)"
+            ><i class="fa fa-pie-chart" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+      <div style="background: #2f3240" class="empty"></div>
+      <div class="tab">
+        <a
+          href="#"
+          class="tab-link"
+          id="action-1"
+          onclick="openTab('tab-1' , this) ; openTabDefault_1()"
+          >Số lệnh</a
+        >
+        <a
+          href="#"
+          class="tab-link"
+          id="action-2"
+          onclick="openTab('tab-2' , this) ; openTabDefault_2()"
+          >Danh mục</a
+        >
+        <a
+          href="#"
+          class="tab-link"
+          id="action-3"
+          onclick="openTab('tab-3' , this)"
+          >Tài sản</a
+        >
+      </div>
+    </div>
+    <script src="./js/protrade.js"></script>
+  </body>
+</html>
