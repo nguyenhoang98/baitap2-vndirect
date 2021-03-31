@@ -53,7 +53,7 @@ function openTabInTab(id, t) {
     document.getElementsByClassName("container__right")[0].style.display ==
     "none"
   ) {
-    // FormatColDefault();
+    FormatColDefault();
   }
   var tab_link = document.getElementsByClassName("tab-link-in-tab");
   var tabcontent = document.getElementsByClassName("tab-in-tab");
@@ -130,18 +130,24 @@ for (var i = 0; i < minus.length; i++) {
   minus[i].addEventListener("click", function () {
     document.getElementsByClassName("container__right")[0].style.display =
       "none";
-    document.getElementsByClassName("empty")[0].style.display = "none";
     document.getElementById("grid").style.gridTemplateColumns = "4fr 1.2fr";
-    document.getElementById("menu_fix_bottom").style.gridTemplateColumns =
-      "4fr 1.2fr";
   });
 }
 
 function FormatColDefault() {
+  console.log("Hello col default");
   document.getElementsByClassName("container__right")[0].style.display =
     "block";
-  document.getElementsByClassName("empty")[0].style.display = "inline-block";
-  document.getElementById("grid").style.gridTemplateColumns = "2.5fr 1 1.2fr";
-  document.getElementById("menu_fix_bottom").style.gridTemplateColumns =
-    "2.5fr 1 1.2fr";
+  document.getElementById("grid").style.gridTemplateColumns = "1fr 350px 400px";
+}
+
+function autoClick_1() {
+  document.getElementById("action-1").click();
+}
+function autoClick_2() {
+  document.getElementById("action-2").click();
+}
+
+function autoClick_3() {
+  document.getElementById("action-3").click();
 }

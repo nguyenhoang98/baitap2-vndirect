@@ -33,7 +33,7 @@
           <li>
             <a href="#"> Hướng dẫn </a>
           </li>
-          <li>
+          <li class="line-none">
             <a href="#" class="text-orange"> Lãi lỗ </a>
           </li>
           <li>
@@ -50,7 +50,7 @@
             <a href="#" class="trial">Bản Trial</a>
           </li>
           <li>
-            <a href="#" class="bg-orange b-r-8">Nâng cấp tài khoản</a>
+            <a href="#" class="bg-orange upgrade b-r-8">Nâng cấp tài khoản</a>
           </li>
           <li>
             <a href="#">
@@ -233,6 +233,38 @@
           <!-- TradingView Widget END -->
           <!-- TradingView Widget END -->
         </div>
+        <div class="menu-trading-view flex">
+          <div class="menu-trading-view-left">
+            Bản quyền thuộc về VNDIRECT © 2021. v2.2.2
+          </div>
+          <div class="menu-trading-view-right">
+            <a
+              href="javascript:void(0)"
+              class="link-trading-view"
+              onclick="openTradingView('tab-trading-view-1', this)"
+              >VN30 INTRADAY</a
+            >
+            <a
+              href="javascript:void(0)"
+              class="link-trading-view"
+              onclick="openTradingView('tab-trading-view-2', this)"
+              >VN30
+            </a>
+            <a
+              href="javascript:void(0)"
+              class="link-trading-view"
+              id="vn30"
+              onclick="openTradingView('tab-trading-view-3', this)"
+              ><i class="fa fa-bar-chart" aria-hidden="true"></i
+            ></a>
+            <a
+              href="javascript:void(0)"
+              class="link-trading-view"
+              onclick="openTradingView('tab-trading-view-4', this)"
+              ><i class="fa fa-pie-chart" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
       </div>
       <div class="container__center" id="container__center">
         <div class="table table-top">
@@ -367,7 +399,13 @@
             <tr>
               <th>Mã</th>
               <th>Giá</th>
-              <th>+/-</th>
+              <th>
+                <span>
+                  <i class="fa fa-caret-left" aria-hidden="true"></i>
+                </span>
+                +/-
+              <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+              </th>
               <th>Lệch</th>
               <th>Tổng KL</th>
             </tr>
@@ -413,8 +451,11 @@
               >
                 Lệnh điều kiện
               </div>
-              <div class="text-center col-2 flex text-orange">
-                <i class="fa fa-refresh" aria-hidden="true"></i>
+              <div class="text-center col-2 text-orange">
+                <span class="refesh">
+                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                </span>
+                &nbsp;
                 <span class="close-action"
                   ><i class="fa fa-minus" aria-hidden="true"></i
                 ></span>
@@ -430,10 +471,40 @@
                   <th>Giá</th>
                   <th>TT</th>
                 </tr>
-                <tr class="text-center">
-                  <td colspan="5" style="color: #777">
-                    Chưa có lệnh nào trong sổ lệnh
-                  </td>
+                <tr class="text-center text-green">
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
+                  <td>66666</td>
                 </tr>
               </table>
             </div>
@@ -455,9 +526,51 @@
                   <th>TT</th>
                 </tr>
                 <tr class="text-center">
-                  <td colspan="7" style="color: #777">
-                    Chưa có lệnh nào trong sổ lệnh
-                  </td>
+                  <tr class="text-center text-green">
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                    <td>88888</td>
+                  </tr>
                 </tr>
               </table>
             </div>
@@ -473,11 +586,14 @@
               <div class="text-center col-4 flex">
                 <span
                   onclick="openTabInTab('vtd' , this)"
-                  class="tab-link-in-tab"
+                  class="tab-link-in-tab col-8"
                   >Vị thế đóng</span
                 >
-                <span class="text-orange">
-                  <i class="fa fa-refresh" aria-hidden="true"></i>
+                <span class="text-orange col-4">
+                  <span class="refesh">
+                    <i class="fa fa-refresh" aria-hidden="true"></i>
+                  </span>
+                  &nbsp;
                   <span class="close-action">
                     <i class="fa fa-minus" aria-hidden="true"></i>
                   </span>
@@ -493,10 +609,50 @@
                   <th colspan="3">Giá hiện tại</th>
                   <th>+/-</th>
                 </tr>
-                <tr class="text-center">
-                  <td colspan="7" style="color: #777">
-                    Chưa có lệnh nào trong sổ lệnh
-                  </td>
+                <tr class="text-center text-green">
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                </tr>
+                <tr class="text-center text-green">
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
+                  <td>88888</td>
                 </tr>
               </table>
             </div>
@@ -513,9 +669,41 @@
                   </th>
                 </tr>
                 <tr class="text-center">
-                  <td colspan="7" style="color: #777">
-                    Chưa có lệnh nào trong sổ lệnh
-                  </td>
+                  <tr class="text-center text-green">
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                  </tr>
+                  <tr class="text-center text-green">
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                    <td>66666</td>
+                  </tr>
                 </tr>
               </table>
             </div>
@@ -707,6 +895,29 @@
               </form>
             </div>
           </div>
+          <div class="tab">
+            <a
+              href="#"
+              class="tab-link"
+              id="action-1"
+              onclick="openTab('tab-1' , this) ; openTabDefault_1()"
+              >Số lệnh</a
+            >
+            <a
+              href="#"
+              class="tab-link"
+              id="action-2"
+              onclick="openTab('tab-2' , this) ; openTabDefault_2()"
+              >Danh mục</a
+            >
+            <a
+              href="#"
+              class="tab-link"
+              id="action-3"
+              onclick="openTab('tab-3' , this)"
+              >Tài sản</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -881,63 +1092,29 @@
         </div>
       </div>
     </div>
-    <div class="menu_fix_bottom" id="menu_fix_bottom">
-      <div class="menu-trading-view flex">
-        <div class="menu-trading-view-left">
-          ản quyền thuộc về VNDIRECT © 2021. v2.2.2
-        </div>
-        <div class="menu-trading-view-right">
-          <a
-            href="javascript:void(0)"
-            class="link-trading-view"
-            onclick="openTradingView('tab-trading-view-1', this)"
-            >VN30 INTRADAY</a
-          >
-          <a
-            href="javascript:void(0)"
-            class="link-trading-view"
-            onclick="openTradingView('tab-trading-view-2', this)"
-            >VN30
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="link-trading-view"
-            id="vn30"
-            onclick="openTradingView('tab-trading-view-3', this)"
-            ><i class="fa fa-bar-chart" aria-hidden="true"></i
-          ></a>
-          <a
-            href="javascript:void(0)"
-            class="link-trading-view"
-            onclick="openTradingView('tab-trading-view-4', this)"
-            ><i class="fa fa-pie-chart" aria-hidden="true"></i
-          ></a>
-        </div>
-      </div>
-      <div style="background: #2f3240" class="empty"></div>
-      <div class="tab">
-        <a
-          href="#"
-          class="tab-link"
-          id="action-1"
-          onclick="openTab('tab-1' , this) ; openTabDefault_1()"
-          >Số lệnh</a
-        >
-        <a
-          href="#"
-          class="tab-link"
-          id="action-2"
-          onclick="openTab('tab-2' , this) ; openTabDefault_2()"
-          >Danh mục</a
-        >
-        <a
-          href="#"
-          class="tab-link"
-          id="action-3"
-          onclick="openTab('tab-3' , this)"
-          >Tài sản</a
-        >
-      </div>
+
+    <div class="menu-fix-tab">
+      <a
+        href="#"
+        class="tab-link"
+        id="action-1"
+        onclick="FormatColDefault() ; autoClick_1()"
+        >Số lệnh</a
+      >
+      <a
+        href="#"
+        class="tab-link"
+        id="action-2"
+        onclick="FormatColDefault() ; autoClick_2()"
+        >Danh mục</a
+      >
+      <a
+        href="#"
+        class="tab-link"
+        id="action-3"
+        onclick="FormatColDefault() ; autoClick_3()"
+        >Tài sản</a
+      >
     </div>
     <script src="./js/protrade.js"></script>
   </body>
