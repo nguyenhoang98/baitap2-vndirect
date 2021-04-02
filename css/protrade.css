@@ -520,8 +520,8 @@ table{
 }
 
 .active{
-    background: #333;
-    color:#f7941d  !important ;
+    background: #2f3240;
+    color: rgb(219, 218, 218) !important ;
     font-weight: bold;
 }
 
