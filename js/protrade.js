@@ -30,11 +30,10 @@ var dateId = setInterval(getDate, 1000);
 /*
 javascript phần tab
 */
-
+document.getElementById("action-1").click();
 function openTab(id, t) {
   var tab_link = document.getElementsByClassName("tab-link");
   var tabcontent = document.getElementsByClassName("tabcontent");
-
   for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
@@ -44,7 +43,24 @@ function openTab(id, t) {
   document.getElementById(id).style.display = "block";
   t.className += " active";
 }
-document.getElementById("action-1").click();
+
+//
+
+function setLayOutIpad(id, t) {
+  if (window.innerWidth <= 1024) {
+    layOutIpad(id, t);
+  }
+}
+
+//
+function layOutIpad(id, t) {
+  document.getElementsByClassName("grid")[0].style.gridTemplateColumns =
+    "1fr 350px 350px";
+  document.getElementsByClassName("container__right")[0].style.display =
+    "block";
+  document.getElementsByClassName("tab")[0].style.width = "350px";
+  openTab(id, t);
+}
 
 // tab in tab
 
@@ -90,7 +106,7 @@ function openFormInTab(id, t) {
   document.getElementById(id).style.display = "block";
   t.className += " active";
 }
-document.getElementById("tab-raio-1").click();
+document.getElementById("tab-radio-1").click();
 
 // tab trading-view
 function openTradingView(id, t) {
@@ -128,26 +144,41 @@ document.getElementById("close-model").onclick = closeModel;
 var minus = document.getElementsByClassName("close-action");
 for (var i = 0; i < minus.length; i++) {
   minus[i].addEventListener("click", function () {
+    var tab_link = document.getElementsByClassName("tab-link");
+    for (var i = 0; i < tab_link.length; i++) {
+      tab_link[i].className = tab_link[i].className.replace(" active", "");
+    }
     document.getElementsByClassName("container__right")[0].style.display =
       "none";
-    document.getElementById("grid").style.gridTemplateColumns = "4fr 1.2fr";
+    document.getElementById("grid").style.gridTemplateColumns = "1fr 400px";
+    document.getElementsByClassName("tab")[0].style.width = "400px";
   });
 }
 
 function FormatColDefault() {
-  console.log("Hello col default");
   document.getElementsByClassName("container__right")[0].style.display =
     "block";
+  document.getElementsByClassName("tab")[0].style.width = "400px";
   document.getElementById("grid").style.gridTemplateColumns = "1fr 350px 400px";
 }
 
-function autoClick_1() {
-  document.getElementById("action-1").click();
-}
-function autoClick_2() {
-  document.getElementById("action-2").click();
+window.onresize = removeClassActive;
+function removeClassActive() {
+  var tab_link = document.getElementsByClassName("tab-link");
+  for (var i = 0; i < tab_link.length; i++) {
+    tab_link[i].className = tab_link[i].className.replace(" active", "");
+  }
 }
 
-function autoClick_3() {
-  document.getElementById("action-3").click();
-}
+//  onresize
+
+window.onresize = function () {
+  if (window.innerWidth <= 1024) {
+    document.getElementsByClassName("container")[0].style.gridTemplateColumns =
+      "1fr 400px";
+    document.getElementsByClassName("container__right")[0].style.display =
+      "none";
+    document.getElementsByClassName("tab")[0].style.width = "400px";
+    document.getElementsByClassName("top")[0].style.display = "none";
+  }
+};
